@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+{% extends "basic_app/base.html" %}
+{% load myextras_custom_template %}    <!--This is under basic_app/templatetags-->
+{% block body_block %}
+    <h1>Welcome to Index!</h1>
+    {{ text|cut:"Hello" }}    <!--Use of Custom Filters-->
+    {{ text|upper }}
+    {{ number|add:99 }}
+{% endblock %}
